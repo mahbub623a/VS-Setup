@@ -72,6 +72,17 @@
             }
         ]
     },
+    "better-comments.tags": [
+        {
+            "tag": "/",
+            "color": "#FA812F",
+            "strikethrough": false,
+            "underline": false,
+            "backgroundColor": "transparent",
+            "bold": false,
+            "italic": false
+        }
+    ],
     "files.autoSave": "afterDelay",
     "cSpell.userWords": [
         "cascadia",
