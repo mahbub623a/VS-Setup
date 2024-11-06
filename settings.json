@@ -1,0 +1,82 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Sublime Text 4 Theme",
+    "workbench.startupEditor": "none",
+    "editor.fontSize": 21,
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "terminal.integrated.copyOnSelection": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "editor.cursorWidth": 3,
+    "editor.mouseWheelZoom": true,
+    "editor.cursorBlinking": "expand",
+    "terminal.integrated.fontSize": 18,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmPasteNative": false,
+    "editor.formatOnType": true,
+    "editor.fontFamily": "'cascadia code', Consolas, 'Courier New', monospace",
+    "editor.fontWeight": "500",
+    "editor.guides.bracketPairs": "active",
+    "editor.stickyScroll.enabled": false,
+    "workbench.colorCustomizations": {
+        // Sidebar and general editor color customizations
+        "sideBar.background": "#232a30",
+        "sideBar.foreground": "#D4D4D4",
+        // Editor background and text color
+        "editor.background": "#303841",
+        "editor.foreground": "#D4D4D4", // You can customize text color here too
+        // Status bar
+        "statusBar.background": "#1e2329",
+        "statusBar.foreground": "#D4D4D4",
+        // Activity bar (the icons on the far left)
+        "activityBar.background": "#1e2329",
+        "activityBar.foreground": "#D4D4D4",
+        // Title bar (at the top)
+        "titleBar.activeBackground": "#1e2329",
+        "titleBar.activeForeground": "#D4D4D4",
+        "titleBar.inactiveBackground": "#1e2329",
+        "titleBar.inactiveForeground": "#D4D4D4",
+        // Active Tab (The tab currently in focus)
+        "tab.activeBackground": "#303841", // Background color of the active tab
+        "tab.activeForeground": "#D4D4D4", // Text color of the active tab
+        // Inactive Tabs (Tabs not currently in focus)
+        "tab.inactiveBackground": "#252b33", // Background color of inactive tabs
+        "tab.inactiveForeground": "#A0A0A0", // Text color of inactive tabs
+        // tab container
+        "editorGroupHeader.tabsBackground": "#252b33", // Background color of the tab container
+        // Terminal background and foreground (text) colors
+        "terminal.background": "#1f242a", // Terminal background color
+        "terminal.foreground": "#D4D4D4", // Terminal text (foreground) color
+        // Panel background (where Output, Problems, Debug Console appear)
+        "panel.background": "#1f242a",
+        // cursor
+        "editorCursor.foreground": "#f6ff00", // Change cursor color (foreground)
+    },
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            // Custom rule for all C++ standard I/O stream objects (cin, cout, cerr, clog, etc.)
+            {
+                "scope": "support.function.stream", // This targets cin, cout, cerr, clog, etc.
+                "settings": {
+                    "foreground": "#dddddd"
+                }
+            },
+            // Custom rule for variable names
+            {
+                "scope": "variable",
+                "settings": {
+                    "foreground": "#dddddd"
+                }
+            }
+        ]
+    },
+    "files.autoSave": "afterDelay",
+    "cSpell.userWords": [
+        "cascadia",
+        "Consolas",
+        "Luv's",
+        "Mahbub"
+    ]
+}
