@@ -120,6 +120,14 @@
         ],
         "description": ""
     },
+    "Find Frequency": {
+        "prefix": "freq",
+        "body": [
+            "count(${1:vec}.begin(), ${1:vec}.end(), ${2:vec});",
+            "$0"
+        ],
+        "description": ""
+    },
     "String uppercase": {
         "prefix": "supper",
         "body": [
@@ -135,22 +143,6 @@
             "$0"
         ],
         "description": ""
-    },
-    "Check power": {
-        "prefix": "power",
-        "body": [
-            "bool isPowerOf(long n, long m)",
-            "{",
-            "    if (m == 1)",
-            "        return n == 1;",
-            "    if (n < 1 || m < 1)",
-            "        return false;",
-            "",
-            "    double logResult = log(n) / log(m);",
-            "    return floor(logResult) == logResult;",
-            "}"
-        ],
-        "description": "Check power"
     },
     "Algorithm": {
         "body": [
@@ -172,5 +164,34 @@
             "}"
         ],
         "description": "Debug your Code"
+    },
+    "Check power": {
+        "prefix": "power",
+        "body": [
+            "bool isPowerOf(long n, long m)",
+            "{",
+            "    if (m == 1)",
+            "        return n == 1;",
+            "    if (n < 1 || m < 1)",
+            "        return false;",
+            "",
+            "    double logResult = log(n) / log(m);",
+            "    return floor(logResult) == logResult;",
+            "}"
+        ],
+        "description": "Check power"
+    },
+    "Sub String Check": {
+        "prefix": "subString",
+        "body": [
+            "bool subString(string main, string sub)",
+            "{",
+            "    if (main.find(sub) != string::npos)",
+            "        return true;",
+            "    else",
+            "        return false;",
+            "}"
+        ],
+        "description": "Sub String Check"
     }
 }
