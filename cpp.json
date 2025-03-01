@@ -1,7 +1,7 @@
 {
-    "Inbuild Modification": {
+    "Inbuilt Modification": {
         "body": [
-            "-------------------------$Inbuild_Modification---------------------------"
+            "-------------------------$Inbuilt_Modification---------------------------"
         ],
         "description": ""
     },
@@ -10,23 +10,23 @@
         "body": [
             "/*",
             "    author  : Mahbub",
-            "    created : ${CURRENT_MONTH_NAME_SHORT}/${CURRENT_DATE}/${CURRENT_YEAR}, ${CURRENT_HOUR}:${CURRENT_MINUTE}",
+            "    created : ${CURRENT_MONTH_NAME_SHORT}/${CURRENT_DATE}/${CURRENT_YEAR}, ${CURRENT_HOUR}:${CURRENT_MINUTE}:${CURRENT_SECOND}",
             "*/",
             "#include <bits/stdc++.h>",
             "using namespace std;",
-            "typedef unsigned long long int ull;",
-            "#define long long long int",
+            "#define int long long",
+            "#define double long double",
             "",
-            "void solve()",
+            "void OTC()",
             "{",
             "    ${0:/* code */}",
             "}",
             "",
-            "int main()",
+            "signed main()",
             "{",
             "    ios::sync_with_stdio(false), cin.tie(0);",
             "    ${1:int tc;\n\tcin >> tc;\n\twhile (tc--)}",
-            "        solve();",
+            "        OTC();",
             "    return 0;",
             "}"
         ],
@@ -45,7 +45,7 @@
             "    return 0;",
             "}"
         ],
-        "description": "Competitive programig template"
+        "description": "Competitive programming template"
     },
     "for loop": {
         "prefix": "forl",
@@ -57,20 +57,31 @@
         ],
         "description": "for loop"
     },
-    "Scan array": {
-        "prefix": "fors",
+    "for auto": {
+        "prefix": "fora",
         "body": [
-            "for (auto &&i : ${1:vec})",
-            "\tcin >> i;",
-            "$0"
+            "for (auto &&${2:mp} : ${1:map})",
+            "{",
+            "\t${0:/* code */}",
+            "}"
         ],
-        "description": "Scan array"
+        "description": "for auto"
+    },
+    "for one": {
+        "prefix": "forOne",
+        "body": [
+            "for (int ${1:i} = ${2:1}; ${1:i} <= ${3:n}; ${1:i}++)",
+            "{",
+            "\t${0:/* code */}",
+            "}"
+        ],
+        "description": "for loop"
     },
     "Print array": {
         "prefix": "print",
         "body": [
-            "for (auto &&val : vec)",
-            "\tcout << val << \" \";",
+            "for (auto &&${2:val} : ${1:vec})",
+            "\tcout << ${2:val} << \" \";",
             "cout << endl;"
         ],
         "description": "Scan array"
@@ -81,68 +92,28 @@
         ],
         "description": ""
     },
-    "output": {
-        "prefix": "sii",
+    "Input-Output ": {
+        "prefix": "inpOut",
         "body": [
-            "cout << ${0:ans} << endl;"
+            "#ifndef ONLINE_JUDGE",
+            "    freopen(\"InpOut/input.txtt\", \"r\", stdin);",
+            "    freopen(\"InpOut/output.txt\", \"w\", stdout);",
+            "#endif"
         ],
-        "description": ""
+        "description": "Input-Output "
     },
-    "Sort array ascending": {
-        "prefix": "asort",
+    "Documentation": {
+        "prefix": "doc",
         "body": [
-            "sort(${1:vec}.begin(), ${1:vec}.end());",
-            "$0"
+            "// Find Frequency                       -> count(vec.begin(), vec.end(), value);",
+            "// Find max element                     -> *max_element(vec.begin(),vec.end());",
+            "// Find max element's index             -> max_element(vec.begin(),vec.end()) - vec.begin();",
+            "// String uppercae                      -> transform(str.begin(),str.end(), str.begin(), ::toupper);",
+            "// String lowercase                     -> transform(str.begin(),str.end(), str.begin(), ::tolower);",
+            "// Find substring's index forword       -> find(\"abc\")",
+            "// Find substring's index backword      -> rfind(\"abc\")"
         ],
-        "description": ""
-    },
-    "Sort array descending": {
-        "prefix": "dsort",
-        "body": [
-            "sort(${1:vec}.begin(), ${1:vec}.end(), greater<int>());",
-            "$0"
-        ],
-        "description": ""
-    },
-    "Reverse array": {
-        "prefix": "rsort",
-        "body": [
-            "reverse(${1:vec}.begin(), ${1:vec}.end());",
-            "$0"
-        ],
-        "description": ""
-    },
-    "Sum of array": {
-        "prefix": "accu",
-        "body": [
-            "accumulate(${1:vec}.begin(), ${1:vec}.end(), 0);",
-            "$0"
-        ],
-        "description": ""
-    },
-    "Find Frequency": {
-        "prefix": "freq",
-        "body": [
-            "count(${1:vec}.begin(), ${1:vec}.end(), ${2:vec});",
-            "$0"
-        ],
-        "description": ""
-    },
-    "String uppercase": {
-        "prefix": "supper",
-        "body": [
-            "transform(${1:str}.begin(), ${1:str}.end(), ${1:str}.begin(), ::toupper);",
-            "$0"
-        ],
-        "description": ""
-    },
-    "String lowercase": {
-        "prefix": "slower",
-        "body": [
-            "transform(${1:str}.begin(), ${1:str}.end(), ${1:str}.begin(), ::tolower);",
-            "$0"
-        ],
-        "description": ""
+        "description": "Documentation"
     },
     "Algorithm": {
         "body": [
@@ -150,36 +121,47 @@
         ],
         "description": ""
     },
-    "Debug your Code": {
-        "prefix": "debug",
+    "Find power": {
+        "prefix": "pwr",
         "body": [
-            "#define dbg(...) debug(#__VA_ARGS__, __VA_ARGS__)",
-            "template <typename Arg>",
-            "void debug(const char *name, Arg &&arg) { cout << name << \" = \" << arg << endl; }",
-            "template <typename Arg, typename... Args>",
-            "void debug(const char *names, Arg &&arg, Args &&...args)",
+            "template <class T>",
+            "constexpr T power(T a, unsigned long long b, T res = 1)",
             "{",
-            "    cout.write(names, strchr(names + 1, ',') - names) << \" = \" << arg << \" |\";",
-            "    debug(strchr(names + 1, ',') + 1, args...);",
+            "    for (; b != 0; b /= 2, a *= a)",
+            "        if (b & 1)",
+            "            res *= a;",
+            "    return res;",
             "}"
         ],
-        "description": "Debug your Code"
+        "description": "Find power"
     },
-    "Check power": {
-        "prefix": "power",
+    "Power Modulo": {
+        "prefix": "pwm",
         "body": [
-            "bool isPowerOf(long n, long m)",
+            "template <class T>",
+            "constexpr T power(T a, unsigned long long b, T res = 1)",
             "{",
-            "    if (m == 1)",
+            "    for (; b != 0; b /= 2, a = (a * a) % MOD)",
+            "        if (b & 1)",
+            "            res = (res * a) % MOD;",
+            "    return res;",
+            "}",
+            ""
+        ],
+        "description": "Power Modulo"
+    },
+    "Is power ": {
+        "prefix": "ipwr",
+        "body": [
+            "bool isPowerOf(int n, int x)",
+            "{",
+            "    if (x <= 1)",
             "        return n == 1;",
-            "    if (n < 1 || m < 1)",
-            "        return false;",
-            "",
-            "    double logResult = log(n) / log(m);",
-            "    return floor(logResult) == logResult;",
+            "    double logResult = log(n) / log(x);",
+            "    return fabs(logResult - round(logResult)) < 1e-9;",
             "}"
         ],
-        "description": "Check power"
+        "description": "Is power "
     },
     "Sub String Check": {
         "prefix": "subString",
@@ -193,5 +175,21 @@
             "}"
         ],
         "description": "Sub String Check"
+    },
+    "Sum of a Digit": {
+        "prefix": "digitSum",
+        "body": [
+            "int Sum(int k)",
+            "{",
+            "    int sum = 0;",
+            "    while (k)",
+            "    {",
+            "        sum += k % 10;",
+            "        k /= 10;",
+            "    }",
+            "    return sum;",
+            "}"
+        ],
+        "description": "Sum of a Digit"
     }
 }

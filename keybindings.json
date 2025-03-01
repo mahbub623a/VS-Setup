@@ -1,0 +1,172 @@
+[
+    {
+        "key": "shift+i",
+        "command": "cursorUp",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+j",
+        "command": "cursorLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+k",
+        "command": "cursorDown",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+l",
+        "command": "cursorRight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+e",
+        "command": "cursorEnd"
+    },
+    {
+        "key": "alt+s",
+        "command": "cursorHome"
+    },
+    {
+        "key": "shift+i",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u001b[A"
+        },
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+k",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u001b[B"
+        },
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+j",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u001b[D"
+        },
+        "when": "terminalFocus"
+    },
+    {
+        "key": "shift+l",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u001b[C"
+        },
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+j",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u001b[1;5D"
+        },
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+l",
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u001b[1;5C"
+        },
+        "when": "terminalFocus"
+    },
+    {
+        "key": "alt+shift+j",
+        "command": "cursorWordLeftSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "alt+shift+l",
+        "command": "cursorWordRightSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "alt+shift+i",
+        "command": "cursorUpSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "alt+shift+k",
+        "command": "cursorDownSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "alt+j",
+        "command": "cursorWordLeft",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+l",
+        "command": "cursorWordRight",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+i",
+        "command": "cursorMove",
+        "args": {
+            "to": "up",
+            "by": "line",
+            "value": 3
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+k",
+        "command": "cursorMove",
+        "args": {
+            "to": "down",
+            "by": "line",
+            "value": 3
+        },
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+u",
+        "command": "editor.action.moveLinesUpAction",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "alt+m",
+        "command": "editor.action.moveLinesDownAction",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "alt+o",
+        "command": "scrollLineUp",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+.",
+        "command": "scrollLineDown",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+n",
+        "command": "editor.action.copyLinesDownAction",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+q",
+        "command": "cph.runTestCases"
+    },
+    {
+        "key": "alt+g",
+        "command": "workbench.action.gotoLine",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+enter",
+        "command": "editor.action.insertLineBefore",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+b",
+        "command": "editor.action.toggleWordWrap",
+        "when": "editorTextFocus"
+    }
+]
