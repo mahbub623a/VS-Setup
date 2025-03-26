@@ -1,0 +1,31 @@
+[
+    // move cursro in editor
+    {"key": "shift+i", "command": "cursorUp", "when": "editorTextFocus"},
+    {"key": "shift+j", "command": "cursorLeft", "when": "editorTextFocus"},
+    {"key": "shift+k", "command": "cursorDown", "when": "editorTextFocus"},
+    {"key": "shift+l", "command": "cursorRight", "when": "editorTextFocus"},
+    {"key": "alt+shift+j", "command": "cursorWordLeftSelect", "when": "textInputFocus"},
+    {"key": "alt+shift+l", "command": "cursorWordRightSelect", "when": "textInputFocus"},
+    {"key": "alt+shift+i", "command": "cursorUpSelect", "when": "textInputFocus"},
+    {"key": "alt+shift+k", "command": "cursorDownSelect", "when": "textInputFocus"},
+    {"key": "alt+l", "command": "cursorEnd", "when": "editorTextFocus"},
+    {"key": "alt+j", "command": "cursorHome", "when": "editorTextFocus"},
+
+    // move cursro in terminal
+    {"key": "shift+i", "command": "workbench.action.terminal.sendSequence", "args": {"text": "\u001b[A"}, "when": "terminalFocus"},
+    {"key": "shift+k", "command": "workbench.action.terminal.sendSequence", "args": {"text": "\u001b[B"}, "when": "terminalFocus"},
+    {"key": "shift+j", "command": "workbench.action.terminal.sendSequence", "args": {"text": "\u001b[D"}, "when": "terminalFocus"},
+    {"key": "shift+l", "command": "workbench.action.terminal.sendSequence", "args": {"text": "\u001b[C"}, "when": "terminalFocus"},
+
+    // Basic Operation
+    {"key": "alt+u", "command": "editor.action.moveLinesUpAction", "when": "textInputFocus"},
+    {"key": "alt+m", "command": "editor.action.moveLinesDownAction", "when": "textInputFocus"},
+    {"key": "alt+o", "command": "scrollLineUp", "when": "editorTextFocus"},
+    {"key": "alt+.", "command": "scrollLineDown", "when": "editorTextFocus"},
+    {"key": "alt+n", "command": "editor.action.copyLinesDownAction", "when": "editorTextFocus"},
+    {"key": "alt+g", "command": "workbench.action.gotoLine", "when": "editorTextFocus"},
+    {"key": "alt+enter", "command": "editor.action.insertLineBefore", "when": "editorTextFocus"},
+    {"key": "alt+x", "command": "editor.action.toggleWordWrap", "when": "editorTextFocus"},
+    {"key": "alt+d", "command": "editor.action.deleteLines", "when": "editorTextFocus && !editorReadonly"},
+    {"key": "alt+q", "command": "cph.runTestCases"}
+]
